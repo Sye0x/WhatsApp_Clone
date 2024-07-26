@@ -1,22 +1,10 @@
 import { Text, View } from "react-native";
-import ChatItem from "@/components/chatlist";
-
-const chat = {
-  id: "1",
-  user: {
-    name: "Sara",
-    image: "./assets/images/Flower.jpg",
-  },
-  lastmessage: {
-    message: "Hello",
-    time: "1:50 am",
-  },
-};
+import ChatScreen from "@/screens/chatscreen";
 
 export default function Index() {
   return (
     <View>
-      <ChatItem chatdata={chat} />
+      <ChatScreen />
     </View>
   );
 }
