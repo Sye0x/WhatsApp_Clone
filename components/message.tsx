@@ -44,6 +44,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     maxWidth: "80%",
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.17,
+    shadowRadius: 3.05,
+    elevation: 4,
   },
   messageText: {
     color: "black", // Default text color

@@ -1,10 +1,17 @@
-import { Text, View } from "react-native";
-import ChatScreen from "@/screens/chatscreen";
-import ChatView from "@/screens/chatview";
+import { Text, SafeAreaView, StyleSheet } from "react-native";
+import Navigation from "@/Navigations/Nav";
+
 export default function Index() {
   return (
-    <View>
-      <ChatView />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Navigation />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+    height: "100%",
+  },
+});
