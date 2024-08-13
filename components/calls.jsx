@@ -1,39 +1,27 @@
 import { Text, View, Image, StyleSheet, Pressable } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
 
-const Calls = ({ chatdata }: any) => {
-  const navigation = useNavigation<any>();
+const Callitems = ({ calldata }) => {
   return (
-    <Pressable
-      style={styles.container}
-      onPress={() =>
-        navigation.navigate("Chat", {
-          id: chatdata.id,
-          name: chatdata.user.name,
-        })
-      }
-    >
+    <View style={styles.container}>
       <View style={styles.datacontainer}>
-        <Image style={styles.image} source={{ uri: chatdata.user.image }} />
+        <Image style={styles.image} source={{ uri: calldata.user.image }} />
         <View style={styles.textstyle}>
           <View style={styles.textContainer}>
             <Text style={styles.name} numberOfLines={1} ellipsizeMode="tail">
-              {chatdata.user.name}
-            </Text>
-            <Text style={styles.message} numberOfLines={1} ellipsizeMode="tail">
-              {chatdata.lastMessage.text}
+              {calldata.user.name}
             </Text>
           </View>
           <Text style={styles.time}>
-            {dayjs(chatdata.lastMessage.createdAt).fromNow(true)}
+            {dayjs(calldata.lastMessage.createdAt).fromNow(true)}
           </Text>
         </View>
       </View>
-    </Pressable>
+    </View>
   );
 };
 
@@ -81,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Calls;
+export default Callitems;

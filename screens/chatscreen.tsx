@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text, FlatList, TextInput, StyleSheet } from "react-native";
 import ChatItem from "@/components/chatlist";
 import chat from "../assets/chats.json";
-import ChatScreenHeader from "@/components/ChatScreenHeader";
+import ChatScreenHeader from "@/components/headers/ChatScreenHeader";
 const ChatScreen = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <ChatScreenHeader />
-      <TextInput placeholder="Ask Meta AI or Search" style={styles.inputbox} />
+      <TextInput placeholder="Ask Meta AI or Searh" style={styles.inputbox} />
       <FlatList
         data={chat}
         renderItem={({ item }) => <ChatItem chatdata={item} />}

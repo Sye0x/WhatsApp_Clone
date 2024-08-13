@@ -6,6 +6,8 @@ import ChatScreen from "@/screens/chatscreen";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import CallHistory from "@/screens/CallHistory";
+import UpdateScreen from "@/screens/UpdateScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,8 +28,9 @@ const MainTabNav = () => {
       />
       <Tab.Screen
         name="Updates"
-        component={NotImplemented}
+        component={UpdateScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <MaterialCommunityIcons
@@ -52,8 +55,9 @@ const MainTabNav = () => {
       />
       <Tab.Screen
         name="Calls"
-        component={NotImplemented}
+        component={CallHistory}
         options={{
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Ionicons name="call-outline" size={24} color="black" />
