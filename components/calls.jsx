@@ -2,6 +2,7 @@ import { Text, View, Image, StyleSheet, Pressable } from "react-native";
 
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 dayjs.extend(relativeTime);
 
@@ -15,10 +16,12 @@ const Callitems = ({ calldata }) => {
             <Text style={styles.name} numberOfLines={1} ellipsizeMode="tail">
               {calldata.user.name}
             </Text>
+            <Text style={styles.time}>
+              {dayjs(calldata.lastMessage.createdAt).fromNow(true)}
+            </Text>
           </View>
-          <Text style={styles.time}>
-            {dayjs(calldata.lastMessage.createdAt).fromNow(true)}
-          </Text>
+
+          <Ionicons name="call-outline" size={24} color="black" />
         </View>
       </View>
     </View>
@@ -28,12 +31,15 @@ const Callitems = ({ calldata }) => {
 const styles = StyleSheet.create({
   container: {
     width: "95%",
-    height: 80,
+    height: 60,
     margin: 5,
+    paddingLeft: 15,
+    flex: 1,
+    marginVertical: 16,
   },
   image: {
-    height: 65,
-    width: 65,
+    height: 50,
+    width: 50,
     borderRadius: 35,
   },
   datacontainer: {
@@ -52,9 +58,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   name: {
-    fontSize: 20,
-    fontWeight: "bold",
-    paddingBottom: 10,
+    fontSize: 16,
   },
   message: {
     fontSize: 16,
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
   },
   time: {
     alignSelf: "flex-start",
-    marginTop: 5,
+
     fontSize: 14,
     color: "gray",
   },

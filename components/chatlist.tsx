@@ -5,7 +5,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
 
-const Calls = ({ chatdata }: any) => {
+const ChatItem = ({ chatdata }: any) => {
   const navigation = useNavigation<any>();
   return (
     <Pressable
@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   image: {
-    height: 65,
-    width: 65,
-    borderRadius: 35,
+    height: 50,
+    width: 50,
+    borderRadius: 25,
   },
   datacontainer: {
     flex: 1,
@@ -64,14 +64,13 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   name: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: "bold",
-    paddingBottom: 10,
+    paddingBottom: 5,
   },
   message: {
-    fontSize: 16,
+    fontSize: 12,
     color: "gray",
-    paddingLeft: 5,
   },
   time: {
     alignSelf: "flex-start",
@@ -81,4 +80,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Calls;
+export default ChatItem;

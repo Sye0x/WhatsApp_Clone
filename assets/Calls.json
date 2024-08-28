@@ -89,57 +89,5 @@
       "text": "How are you doing?",
       "createdAt": "2022-10-09T14:30:00.000Z"
     }
-  },
-  {
-    "id": "8",
-    "user": {
-      "id": "u9",
-      "name": "Mom",
-      "image": "https://image.shutterstock.com/image-vector/super-mom-hero-superhero-cartoon-600w-720015928.jpg"
-    },
-    "lastMessage": {
-      "id": "m8",
-      "text": "Dear, what did you eat, today?",
-      "createdAt": "2020-09-27T15:40:00.000Z"
-    }
-  },
-  {
-    "id": "9",
-    "user": {
-      "id": "u9",
-      "name": "Andrei",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg"
-    },
-    "lastMessage": {
-      "id": "m8",
-      "text": "What about our podcast?",
-      "createdAt": "2020-09-27T15:40:00.000Z"
-    }
-  },
-  {
-    "id": "10",
-    "user": {
-      "id": "u9",
-      "name": "Misha",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/biahaze.jpg"
-    },
-    "lastMessage": {
-      "id": "m8",
-      "text": "Do I have to send you any more details?",
-      "createdAt": "2020-09-27T15:40:00.000Z"
-    }
-  },
-  {
-    "id": "11",
-    "user": {
-      "id": "u9",
-      "name": "Alina",
-      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.png"
-    },
-    "lastMessage": {
-      "id": "m8",
-      "text": "Here is a picture of Mark.",
-      "createdAt": "2020-09-27T15:40:00.000Z"
-    }
   }
 ]
